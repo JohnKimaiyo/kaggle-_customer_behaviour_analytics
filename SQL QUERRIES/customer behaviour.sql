@@ -35,3 +35,5 @@ GROUP BY
    datepart(month, [REGISTRATION DATE])
 ORDER BY 
     month;
+
+    -- Cohort Analysis --
