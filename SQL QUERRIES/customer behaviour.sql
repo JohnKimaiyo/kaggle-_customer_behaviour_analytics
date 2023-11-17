@@ -7,3 +7,7 @@ SELECT  [CUSTOMER ID], COUNT(*) AS total_transactions
 GROUP BY  [CUSTOMER ID];
 
 
+-- Total amount spent by each customer
+SELECT [CUSTOMER ID], SUM(SALES) Total_Spent
+  FROM [Kaggle Customer DataBase].[dbo].['kaggle customer data$']
+GROUP BY [CUSTOMER ID];
