@@ -24,3 +24,14 @@ GROUP BY
     datepart(month, [REGISTRATION DATE])
 ORDER BY
     datepart(month, [REGISTRATION DATE]);
+
+-- Monthly total sales
+    
+	SELECT 
+      datepart(month, [REGISTRATION DATE]) AS month,
+    SUM([SALES]) AS total_sales
+  FROM [Kaggle Customer DataBase].[dbo].['kaggle customer $']
+GROUP BY 
+   datepart(month, [REGISTRATION DATE])
+ORDER BY 
+    month;
