@@ -15,3 +15,12 @@ GROUP BY [CUSTOMER ID];
 
 
 -- Time-based Analysis ---
+-- Monthly new customer acquisition
+  SELECT
+    datepart(month, [REGISTRATION DATE]) AS month,
+    COUNT(DISTINCT [CUSTOMER ID]) AS new_customers
+  FROM [Kaggle Customer DataBase].[dbo].['kaggle customer $']
+GROUP BY
+    datepart(month, [REGISTRATION DATE])
+ORDER BY
+    datepart(month, [REGISTRATION DATE]);
